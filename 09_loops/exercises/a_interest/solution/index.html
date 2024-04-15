@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>09.a - Interest</title>
+</head>
+<body>
+<main>
+    <h1>Zinsrechner</h1>
+    <div id="data">
+        <div class="field">
+            <label for="money">Kapital</label>
+            <input id="money" type="number">
+        </div>
+        <div class="field">
+            <label for="interest">Jahreszins</label>
+            <input id="interest" type="number">
+        </div>
+        <div class="field">
+            <label for="runtime">Laufzeit</label>
+            <input id="runtime" type="number">
+        </div>
+        <button id="evaluate">Auswerten</button>
+    </div>
+    <div id="result" class="hidden">
+        <p>Bei deinen Eingaben hast du am Ende der Laufzeit <span id="final">...</span> auf deinem Konto. Das sind <span id="profit">...</span> mehr als zu Beginn.</p>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

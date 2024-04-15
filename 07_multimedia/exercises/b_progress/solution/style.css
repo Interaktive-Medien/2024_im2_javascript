@@ -1,0 +1,40 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffbe0b;
+    overflow: hidden;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.3s linear;
+}
+#overlay1 {
+    background-color: #fb5607;
+}
+#overlay2 {
+    background-color: #ff006e;
+}
+#control {
+    font-size: 9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 10;
+}
+#control:hover {
+    opacity: .6;
+}

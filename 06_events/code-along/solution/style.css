@@ -1,0 +1,43 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+body {
+    height: 500vh;
+    background-color: rgb(255,255,255);
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+}
+:root {
+    --size-circle: 100px;
+    --size-pupil: 25px;
+}
+#eye {
+    width: var(--size-circle);
+    height: var(--size-circle);
+    background: blue;
+    border-radius: 9999px;
+    position: relative;
+}
+#eye.bloody {
+    background: red;
+}
+#pupil {
+    width: var(--size-pupil);
+    height: var(--size-pupil);
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+

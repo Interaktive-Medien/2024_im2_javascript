@@ -1,0 +1,40 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+h1 {
+    font-weight: normal;
+    font-size: 5rem;
+}
+#data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+#result {
+    max-width: 400px;
+    text-align: center;
+}
+#result > p {
+    font-size: 1.4rem;
+}
+#result > p > span {
+    color: #3a86ff;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}

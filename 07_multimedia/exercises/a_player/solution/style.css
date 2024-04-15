@@ -1,0 +1,22 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0327;
+}
+main.active {
+    background-color: #66f600;
+}
+video {
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+    object-fit: cover;
+}

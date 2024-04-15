@@ -1,0 +1,83 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: AppleSystemUIFont, sans-serif;
+}
+:root {
+    --co-button: #ffbe0b;
+    --co-ct-1: #fb5607;
+    --co-ct-2: #ff006e;
+    --co-track-1: #8338ec;
+    --co-track-2: #3a86ff;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.track_container {
+    width: 100%;
+    height: 100%;
+}
+.track_container > .track {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.track_container > .track > .title {
+    font-size: 10rem;
+    color: white;
+}
+.track_container > .track > .song {
+    font-size: 1.2rem;
+    color: white;
+}
+.track_container > .track audio {
+    position: absolute;
+    opacity: 0;
+}
+#track_01 {
+    background-color: var(--co-ct-1);
+}
+#track_01 > .track {
+    background-color: var(--co-track-1);
+}
+#track_02 {
+    background-color: var(--co-ct-2);
+}
+#track_02 > .track {
+    background-color: var(--co-track-2);
+}
+
+#controls {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: var(--co-button);
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#controls:hover {
+    width: 180px;
+    height: 180px;
+}
+#controls > p {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}

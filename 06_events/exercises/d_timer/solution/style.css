@@ -1,0 +1,50 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#timer {
+    font-size: 9rem;
+}
+#minutes,
+#seconds {
+    font-family: monospace;
+}
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+button {
+    background-color: #ff006e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 180px;
+    transition: transform 0.2s ease-in-out, background-color 0.1s ease-in;
+}
+button[disabled] {
+    pointer-events: none;
+    opacity: .5;
+}
+button:hover {
+    transform: scale(1.05);
+}
+button:active{
+    background-color: #d2015c;
+}

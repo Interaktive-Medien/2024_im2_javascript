@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Single+Day&display=swap');
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+#blackboard {
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    background-color: #12170f;
+    border: 15px solid #7c4213;
+    padding: 25px;
+    column-count: 2;
+}
+#blackboard > p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: "Single Day", cursive;
+}
+.bottom {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.bottom > * {
+    min-width: 80px;
+}

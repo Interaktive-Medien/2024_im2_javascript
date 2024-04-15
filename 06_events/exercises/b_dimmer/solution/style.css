@@ -1,0 +1,23 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    background-color: #3a3737;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#light {
+    font-size: 5rem;
+    height: 105px;
+}
+#dimmer {
+    width: 300px;
+}

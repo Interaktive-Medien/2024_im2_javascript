@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>D -🏴󠁧󠁢󠁷󠁬󠁳󠁿 what the flag?</title>
+</head>
+<body>
+<main>
+    <section class="screen" id="intro">
+        <img src="data/FALLBACK.svg" alt="Flag" id="flag" />
+        <h1>Flaggen-Quiz</h1>
+        <button id="start">Spiel starten</button>
+    </section>
+    <section class="screen" id="game">
+        <div id="flags">
+            <img src="data/FALLBACK.svg" alt="Flag" />
+            <img src="data/FALLBACK.svg" alt="Flag" />
+            <img src="data/FALLBACK.svg" alt="Flag" />
+            <img src="data/FALLBACK.svg" alt="Flag" />
+        </div>
+        <p id="country">...</p>
+        <div id="overview">
+            <span data-state="success"></span>
+            <span data-state="fail"></span>
+            <span data-state="success"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <section class="screen" id="outro">
+        <p id="points">../..</p>
+        <button id="restart">Nochmals spielen</button>
+    </section>
+</main>
+<script src="script.js" type="module"></script>
+</body>
+</html>

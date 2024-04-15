@@ -1,0 +1,68 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#buttons > button {
+    padding: 10px 20px;
+    background-color: #ffbe0b;
+    border: 1px solid black;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+#person {
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+#person.hidden {
+    display: none;
+}
+#person > h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+#person > p {
+    padding-bottom: 24px;
+}
+#person > div:not(:last-of-type) {
+    padding-bottom: 6px;
+}
+#person > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+#person > div > svg {
+    width: 16px;
+    height: 16px;
+}
+#person > div > a {
+    text-decoration: none;
+    color: inherit;
+}

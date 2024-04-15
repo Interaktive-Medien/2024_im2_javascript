@@ -1,0 +1,89 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: AppleSystemUIFont, sans-serif;
+}
+.screen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.screen.hidden {
+    display: none;
+}
+
+/*intro*/
+#intro > img {
+    width: 140px;
+    height: auto;
+}
+#intro > h1 {
+    font-size: 6rem;
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+/*game*/
+#game > #flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#game > #flags > img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+#game > #flags > img:hover {
+    transform: scale3d(1.1,1.1,1.1);
+}
+#game > #country {
+    font-size: 3.2rem;
+}
+#game > #overview {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#game > #overview > span:not(:last-of-type) {
+    border-right: 1px solid black;
+}
+#game > #overview > span[data-state="success"] {
+    background-color: #5c9e31;
+}
+#game > #overview > span[data-state="fail"] {
+    background-color: #d22f27;
+}
+/*outro*/
+#outro > p {
+    font-size: 8rem;
+    padding-bottom: 20px;
+}
+/*buttons*/
+#intro > button,
+#outro > button {
+    background-color: rgba(0,0,0,1);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    padding: 15px 35px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+}
+#intro > button:hover,
+#outro > button:hover{
+    background-color: rgba(0,0,0,.8);
+    transform: scale3d(1.05, 1.05, 1.05);
+}

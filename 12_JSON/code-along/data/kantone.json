@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Aargau",
+    "flaeche": 1404,
+    "einwohner": 645000,
+    "hauptort": "Aarau"
+  },
+  {
+    "name": "Appenzell Ausserrhoden",
+    "flaeche": 243,
+    "einwohner": 54000,
+    "hauptort": "Herisau"
+  },
+  {
+    "name": "Appenzell Innerrhoden",
+    "flaeche": 173,
+    "einwohner": 15000,
+    "hauptort": "Appenzell"
+  },
+  {
+    "name": "Basel-Land",
+    "flaeche": 518,
+    "einwohner": 281000,
+    "hauptort": "Liestal"
+  },
+  {
+    "name": "Basel-Stadt",
+    "flaeche": 37,
+    "einwohner": 190000,
+    "hauptort": "Basel"
+  },
+  {
+    "name": "Bern",
+    "flaeche": 5959,
+    "einwohner": 1009000,
+    "hauptort": "Bern"
+  },
+  {
+    "name": "Fribourg",
+    "flaeche": 1671,
+    "einwohner": 303000,
+    "hauptort": "Fribourg"
+  },
+  {
+    "name": "Genève",
+    "flaeche": 282,
+    "einwohner": 477000,
+    "hauptort": "Genève"
+  },
+  {
+    "name": "Glarus",
+    "flaeche": 685,
+    "einwohner": 39000,
+    "hauptort": "Glarus"
+  },
+  {
+    "name": "Graubünden",
+    "flaeche": 7105,
+    "einwohner": 195000,
+    "hauptort": "Chur"
+  },
+  {
+    "name": "Jura",
+    "flaeche": 839,
+    "einwohner": 72000,
+    "hauptort": "Delémont"
+  },
+  {
+    "name": "Luzern",
+    "flaeche": 1494,
+    "einwohner": 394000,
+    "hauptort": "Luzern"
+  },
+  {
+    "name": "Neuchâtel",
+    "flaeche": 803,
+    "einwohner": 177000,
+    "hauptort": "Neuchâtel"
+  },
+  {
+    "name": "Nidwalden",
+    "flaeche": 276,
+    "einwohner": 42000,
+    "hauptort": "Stans"
+  },
+  {
+    "name": "Obwalden",
+    "flaeche": 491,
+    "einwohner": 36000,
+    "hauptort": "Sarnen"
+  },
+  {
+    "name": "St. Gallen",
+    "flaeche": 2026,
+    "einwohner": 495000,
+    "hauptort": "St. Gallen"
+  },
+  {
+    "name": "Schaffhausen",
+    "flaeche": 299,
+    "einwohner": 79000,
+    "hauptort": "Schaffhausen"
+  },
+  {
+    "name": "Schwyz",
+    "flaeche": 908,
+    "einwohner": 152000,
+    "hauptort": "Schwyz"
+  },
+  {
+    "name": "Solothurn",
+    "flaeche": 791,
+    "einwohner": 263000,
+    "hauptort": "Solothurn"
+  },
+  {
+    "name": "Thurgau",
+    "flaeche": 991,
+    "einwohner": 263000,
+    "hauptort": "Frauenfeld"
+  },
+  {
+    "name": "Ticino",
+    "flaeche": 2813,
+    "einwohner": 350000,
+    "hauptort": "Bellinzona"
+  },
+  {
+    "name": "Uri",
+    "flaeche": 1077,
+    "einwohner": 36000,
+    "hauptort": "Altdorf"
+  },
+  {
+    "name": "Vaud",
+    "flaeche": 3212,
+    "einwohner": 761000,
+    "hauptort": "Lausanne"
+  },
+  {
+    "name": "Valais",
+    "flaeche": 5225,
+    "einwohner": 331000,
+    "hauptort": "Sion"
+  },
+  {
+    "name": "Zug",
+    "flaeche": 239,
+    "einwohner": 120000,
+    "hauptort": "Zug"
+  },
+  {
+    "name": "Zürich",
+    "flaeche": 1729,
+    "einwohner": 1446000,
+    "hauptort": "Zürich"
+  }
+]

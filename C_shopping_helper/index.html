@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>C - 🥦️ Shopping Helper</title>
+</head>
+<body>
+<main>
+    <input id="add" list="known-products" type="text" aria-label="Eintrag hinzufügen">
+    <datalist id="known-products">
+        <option value="Brot"></option>
+    </datalist>
+    <section class="content">
+        <h1><span>🥦</span>Einkaufsliste</h1>
+        <ul id="list">
+            <li><span>Brot</span><span data-value="Brot">✅</span></li>
+        </ul>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

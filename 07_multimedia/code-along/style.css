@@ -1,0 +1,53 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+#timing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#controls > p,
+#timing > p{
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+    transition: opacity 0.2s ease-out;
+}
+#controls > p {
+    cursor: pointer;
+}
+#controls > p.hidden {
+    display: none;
+}
+#controls > p:hover {
+    opacity: .5;
+}

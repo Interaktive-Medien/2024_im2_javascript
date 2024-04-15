@@ -1,0 +1,26 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+}
+#container {
+    background-color: #ffbe0b;
+    padding: 30px;
+    height: 100%;
+}
+#container > p {
+    font-size: 3rem;
+}
+ul {
+    list-style-type: none;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

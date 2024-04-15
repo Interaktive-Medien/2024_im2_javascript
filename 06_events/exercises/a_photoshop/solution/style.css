@@ -1,0 +1,27 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: filter 0.5s ease-out;
+}
+img.grayscale {
+    filter: grayscale(100%);
+}
+button {
+    bottom: 30px;
+}

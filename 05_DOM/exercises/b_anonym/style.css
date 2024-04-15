@@ -1,0 +1,36 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    max-width: 620px;
+}
+h1 {
+    font-size: 3rem;
+    padding-bottom: 24px;
+}
+#lead {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 16px;
+    line-height: 144%;
+}
+#content {
+    font-size: 1.1rem;
+    line-height: 144%;
+}
+span.black {
+    background-color: black;
+}

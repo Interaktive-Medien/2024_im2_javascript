@@ -1,0 +1,48 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main {
+    padding: 3rem;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+}
+#text {
+    font-size: 4rem;
+}
+#text > #name {
+    background-color: rgb(255,255,0);
+}
+#text > #skills > span {
+    background-color: rgb(255,0,255);
+}
+#text > #skills > span:not(:last-of-type) {
+    margin-right: 15px;
+}
+#text > #skills > span:not(:last-of-type):after {
+    content: ',';
+    display: inline-block;
+}
+#text > #skills > span:last-of-type:after {
+    content: '.';
+    display: inline-block;
+}
+#add {
+    font-size: 4rem;
+    border: none;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    width: calc(100% - 6rem);
+    color: rgb(0,255,0);
+}
+#add::placeholder {
+    color: rgb(0,255,0);
+}
+#add:focus {
+    outline: none;
+}
