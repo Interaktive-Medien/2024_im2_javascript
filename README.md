@@ -2,7 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/Programmiersprache-JavaScript-%23f7df1e)
 ![Static Badge](https://img.shields.io/badge/Kurs-MMP_IM2-blue)
-![Static Badge](https://img.shields.io/badge/Zuletst_aktualisiert-20.03.2024-green)
+![Static Badge](https://img.shields.io/badge/Zuletst_aktualisiert-15.04.2024-green)
 
 > Im zweiten Semester der interaktiven Medien wirst du die Programmiersprache JavaScript lernen. Die Files in diesem GitHub Repository sind die Grundlage für den Unterricht, alle benötigten Ressourcen findest du hier.
 
