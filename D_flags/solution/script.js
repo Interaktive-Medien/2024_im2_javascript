@@ -1,52 +1,20 @@
-// ******************************** DOM Elements
-const introCt = document.querySelector('#intro');
-const gameCt = document.querySelector('#game');
-const outroCt = document.querySelector('#outro');
-const screens = [introCt, gameCt, outroCt];
-const startBtn = introCt.querySelector('#start');
-const overviewCt = gameCt.querySelector('#overview');
-const flagsCt = gameCt.querySelector('#flags');
-const countryTitle = gameCt.querySelector('#country');
-const restartBtn = outroCt.querySelector('#restart');
-const pointsCt = outroCt.querySelector('#points');
+/****GLOBALS************************/
+// DOM-elements
+const main = document.querySelector('main');
+const flagsCt = main.querySelector('#flags');
+const overviewCt = main.querySelector('#overview');
+const countryTitle = main.querySelector('#country');
 
-
-// ******************************** Constants
+// constants
 const gameRounds = 10;
 
-
-// ******************************** Global Functions
+// functions
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function arrayHasDuplicates(array) {
-    return (new Set(array)).size !== array.length;
-}
 
-
-// ******************************** App
-// -> initialize active screen
-let activeScreen = localStorage.getItem('active-screen');
-if (activeScreen) {
-    activeScreen = JSON.parse(activeScreen);
-} else {
-    activeScreen = 0;
-    localStorage.setItem('active-screen', JSON.stringify(activeScreen))
-}
-
-// -> create active screen function & initialize
-function updateActiveScreen() {
-    screens.forEach((screen, index) => {
-        if (index !== activeScreen) {
-            screen.classList.add('hidden')
-        } else {
-            screen.classList.remove('hidden')
-        }
-    })
-}
-updateActiveScreen();
-
-// -> load countries
+/****APP****************************/
+// load data
 async function loadCountries () {
     const file = '../data/countries.json';
     const response = await fetch(file);
@@ -54,37 +22,23 @@ async function loadCountries () {
 }
 const countries = await loadCountries();
 
-// -> load intro flag
-function loadIntroFlag() {
-    const introFlag = intro.querySelector('#flag');
-    const introCountry = countries[randomNumber(0,countries.length - 1)];
-    introFlag.setAttribute('src', introCountry.image);
-    introFlag.setAttribute('title', introCountry.name)
-}
-loadIntroFlag();
-
-// -> handle click on play
-startBtn.addEventListener('click', function (e) {
-    activeScreen = 1;
-    localStorage.setItem('active-screen', JSON.stringify(activeScreen));
-    updateActiveScreen();
-    loadGameRound();
-});
-
-// -> initialize quiz overview
+// init game progress from local storage or init new game
 let gameProgress = localStorage.getItem('game-progress');
-if (gameProgress) {
-    gameProgress = JSON.parse(gameProgress);
-} else {
-    gameProgress = [];
-    for (let i = 0; i < gameRounds; i++) {
-        gameProgress.push(null)
+function initGame() {
+    if (gameProgress) {
+        gameProgress = JSON.parse(gameProgress);
+    } else {
+        gameProgress = [];
+        for (let i = 0; i < gameRounds; i++) {
+            gameProgress.push(null)
+        }
+        localStorage.setItem('game-progress', JSON.stringify(gameProgress))
     }
-    localStorage.setItem('game-progress', JSON.stringify(gameProgress))
 }
+initGame();
 
-// -> show game progress in DOM
-function updateGameProgress() {
+// update game overview
+function loadOverview() {
     overviewCt.innerHTML = '';
     gameProgress.forEach(step => {
         const span = document.createElement('span');
@@ -96,52 +50,63 @@ function updateGameProgress() {
         overviewCt.appendChild(span)
     });
 }
-updateGameProgress();
+loadOverview();
 
-// -> game round
+// load a game round
 function loadGameRound() {
-    const randomCountryIndexed = [];
-    const randomCorrectCountry = randomNumber(0,3);
+    // randomly select countries
+    const randomCountryIndexes = [];
     for (let i = 0; i < 4; i++) {
-        randomCountryIndexed.push(randomNumber(0,countries.length - 1))
+        randomCountryIndexes.push(randomNumber(0,countries.length - 1))
     }
-    const roundCountries = countries.filter((country,key) => randomCountryIndexed.includes(key));
-    const correctCountry = roundCountries.find((country, key) => key === randomCorrectCountry);
-    roundCountries.forEach((country,key) => {
+    const correctCountryIndex = randomNumber(0,3);
+    randomCountryIndexes.forEach((countryIndex, key) => {
+        const isCorrectCountry = key === correctCountryIndex;
+        const country = countries[countryIndex];
         flagsCt.children[key].setAttribute('src', country.image);
-        flagsCt.children[key].dataset.state = country.name === correctCountry.name ? 'correct' : 'incorrect';
+        flagsCt.children[key].dataset.state = isCorrectCountry ? 'correct' : 'incorrect';
         flagsCt.children[key].addEventListener('click', validateAnswer)
+        if (isCorrectCountry) {
+            countryTitle.innerText = country.name;
+        }
     })
-    countryTitle.innerText = correctCountry.name;
 }
 loadGameRound();
 
-// -> validate answer
 function validateAnswer (e) {
-    const currentIndex = gameProgress.indexOf(null);
-    gameProgress[currentIndex] = e.target.dataset.state === 'correct';
+    // load current round
+    const currentRoundIndex = gameProgress.indexOf(null);
+    // validate answer and save to localStorage
+    if (e.target.dataset.state === 'correct') {
+        gameProgress[currentRoundIndex] = true;
+    } else {
+        gameProgress[currentRoundIndex] = false;
+    }
     localStorage.setItem('game-progress', JSON.stringify(gameProgress));
-    updateGameProgress();
-    if (currentIndex !== gameRounds - 1) {
+    // update overview
+    loadOverview();
+    // end game if needed
+    if (currentRoundIndex !== gameRounds - 1) {
         loadGameRound();
     } else {
-        activeScreen = 2;
-        localStorage.setItem('active-screen', JSON.stringify(activeScreen));
-        updateActiveScreen();
-        const points = gameProgress.filter(item => !!item).length;
-        pointsCt.innerText = `${points}/${gameRounds}`;
+        setTimeout(() => {
+            restartGame();
+        }, 500)
     }
 }
 
-// -> restart game
-restartBtn.addEventListener('click', function (e) {
-    activeScreen = 0;
-    localStorage.setItem('active-screen', JSON.stringify(activeScreen));
-    updateActiveScreen();
+// restart game
+function restartGame() {
+    // place message
+    const points = gameProgress.filter(item => !!item).length;
+    alert(`finished with ${points}/${gameRounds} points!`);
+    // reset game progress
     gameProgress = [];
     for (let i = 0; i < gameRounds; i++) {
         gameProgress.push(null);
     }
     localStorage.setItem('game-progress', JSON.stringify(gameProgress));
-    updateGameProgress();
-})
+    // load new game and overview
+    loadOverview();
+    loadGameRound();
+}

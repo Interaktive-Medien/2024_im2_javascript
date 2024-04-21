@@ -1,28 +1,36 @@
-// ******************************** DOM Elements
-const introCt = document.querySelector('#intro');
-const gameCt = document.querySelector('#game');
-const outroCt = document.querySelector('#outro');
-const screens = [introCt, gameCt, outroCt];
-const startBtn = introCt.querySelector('#start');
-const overviewCt = gameCt.querySelector('#overview');
-const flagsCt = gameCt.querySelector('#flags');
-const countryTitle = gameCt.querySelector('#country');
-const restartBtn = outroCt.querySelector('#restart');
-const pointsCt = outroCt.querySelector('#points');
+/****GLOBALS************************/
+// DOM-elements
+const main = document.querySelector('main');
+const flagsCt = main.querySelector('#flags');
+const overviewCt = main.querySelector('#overview');
+const countryTitle = main.querySelector('#country');
 
-
-// ******************************** Constants
+// constants
 const gameRounds = 10;
 
-
-// ******************************** Global Functions
+// functions
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function arrayHasDuplicates(array) {
-    return (new Set(array)).size !== array.length;
-}
 
+/****APP****************************/
+// load data
+async function loadCountries () {}
+const countries = await loadCountries();
 
-// ******************************** App
-// code app here
+// init game progress from local storage or init new game
+function initGame() {}
+initGame();
+
+// update game overview
+function loadOverview() {}
+loadOverview();
+
+// load a game round
+function loadGameRound() {}
+loadGameRound();
+
+function validateAnswer (e) {}
+
+// restart game
+function restartGame() {}
