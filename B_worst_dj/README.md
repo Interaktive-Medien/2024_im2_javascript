@@ -5,7 +5,7 @@
 Lass dich von den Dozierenden durch die Übung leiten - mehr brauchst du nicht zu tun. Viel Spass 🥳
 
 ### Wie weiter?
-`Feierabend 🥳` - wenn du Lust hast, kannst du jetzt auch noch die zusätzlichen Übungen der Themen `05` - `07` lösen, um den Stoff des Tages zu festigen.
+Du kannst jetzt auch noch die zusätzlichen Übungen der Themen `05` - `07` lösen, um den Stoff der besprochenen Themen zu festigen.
 
 - [Übungen](../05_DOM/exercises) `05` 🎨 DOM
 - [Übungen](../06_events/exercises) `06` 🪩 Events

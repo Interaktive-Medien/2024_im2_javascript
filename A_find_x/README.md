@@ -8,7 +8,7 @@
 4. Wenn alle fertig sind, werden wir das Script im Plenum besprechen und allfällige Fragen klären. 
 
 ### Wie weiter?
-`Feierabend 🥳` - wenn du Lust hast, kannst du jetzt auch noch die zusätzlichen Übungen der Themen `01` - `04` lösen, um den Stoff des ersten Tages zu festigen.
+Du kannst jetzt auch noch die zusätzlichen Übungen der Themen `01` - `04` lösen, um den Stoff der besprochenen Themen zu festigen.
 
 - [Übungen](../01_variablen/exercises) `01` 📦 Variablen
 - [Übungen](../02_typen/exercises) `02` #️⃣ Typen

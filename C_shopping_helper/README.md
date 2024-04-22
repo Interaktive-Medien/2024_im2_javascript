@@ -7,7 +7,7 @@
 
 
 ### Wie weiter?
-`Feierabend 🥳` - wenn du Lust hast, kannst du jetzt auch noch die zusätzlichen Übungen der Themen `08` - `10` lösen, um den Stoff des Tages zu festigen.
+Du kannst jetzt auch noch die zusätzlichen Übungen der Themen `08` - `10` lösen, um den Stoff der besprochenen Themen zu festigen.
 
 - [Übungen](../08_arrays/exercises) `08` 📚 Arrays
 - [Übungen](../09_loops/exercises) `09` 🔄 Loops

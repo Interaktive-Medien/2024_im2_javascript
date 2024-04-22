@@ -6,7 +6,7 @@
 2. Lasse dich nun von den Dozierenden durch das Code-Along leiten - viel Spass! 🇨🇦🇨🇬🇧🇶🇦🇶
 
 ### Wie weiter?
-`Feierabend 🥳` - wenn du Lust hast, kannst du jetzt auch noch die zusätzlichen Übungen der Themen `11` und `12` lösen, um den Stoff des Tages zu festigen.
+Du kannst jetzt auch noch die zusätzlichen Übungen der Themen `11` und `12` lösen, um den Stoff der besprochenen Themen zu festigen.
 
 - [Übungen](../11_objekte/exercises) `11` 🛸 Objekte
 - [Übungen](../12_JSON/exercises) `12` 📑 JSON
